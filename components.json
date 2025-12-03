@@ -13,10 +13,12 @@
   "iconLibrary": "lucide",
   "aliases": {
     "components": "@/app/_components",
-    "utils": "@/_components/utils",
+    "utils": "@/app/_components/utils",
     "ui": "@/app/_components/ui",
     "lib": "@/lib",
     "hooks": "@/hooks"
   },
-  "registries": {}
+  "registries": {
+    "@aceternity": "https://ui.aceternity.com/registry/{name}.json"
+  }
 }
