@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
-import { SparklesCore } from '@/components/ui/sparkles'
+import { SparklesCore } from '@/app/_components/ui/sparkles'
+import { Sidebar, SidebarBody } from '@/app/_components/ui/sidebar'
+import SidebarComponent from './_components/SidebarComponent'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -26,19 +28,12 @@ export default function RootLayout ({
   return (
     <html lang='en' className='dark'>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex`}
       >
-        <div className='w-400'>
-          <SparklesCore
-            id='tsparticlesfullpage'
-            background='transparent'
-            minSize={0.6}
-            maxSize={1.4}
-            particleDensity={100}
-            className='w-full h-full absolute inset-0'
-            particleColor='#FFF'
-          />
+        <div className='absolute inset-0 -z-10'>
+          <SparklesCore background='black' speed={2} />
         </div>
+        <SidebarComponent />
         {children}
       </body>
     </html>
