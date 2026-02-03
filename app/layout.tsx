@@ -39,7 +39,10 @@ export default function RootLayout ({
             particleColor='#FFF'
           />
         </div>
-        {children}
+        <div className="grid place-items-center h-full w-full">
+          
+          {children}
+        </div>
       </body>
     </html>
   )
