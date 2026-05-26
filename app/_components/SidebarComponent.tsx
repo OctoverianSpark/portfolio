@@ -1,11 +1,8 @@
 'use client'
-import { useState } from 'react'
 import { Sidebar, SidebarBody } from './ui/sidebar'
 import { Avatar, AvatarImage } from './ui/avatar'
 
 export default function SidebarComponent () {
-  const [open, setOpen] = useState<boolean>(false)
-
   return (
     <Sidebar animate={false}>
       <SidebarBody className='justify-between gap-10 h-screen '>
